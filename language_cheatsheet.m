@@ -177,3 +177,17 @@ axis([0 10 -5 10]);   % specifies custom axis interval for the graph- min_x, max
 
 
 %==========================================================================
+% if statements
+
+var7 = randi(100);
+
+if var7 > 50
+    fprintf('var is %i larger than 50', (var7-3));
+elseif var7 == 50
+    fprintf('var is 50');
+else
+    fprintf('var is %i smaller than 50', (3-var7));
+end
+
+
+%==========================================================================
