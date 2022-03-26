@@ -67,18 +67,18 @@ whos('-file', 'file1.mat') % display info about variables in file1
 %==========================================================================
 % user input
 
-var3 = input('Enter data: ')       % can input both numbers and arrays to this; empty and char input = empty array
-var4 = input('Enter text: ', 's')  % stored data would be saved as char array
+var3 = input('Enter data: ');       % can input both numbers and arrays to this; empty and char input = empty array
+var4 = input('Enter text: ', 's');  % stored data would be saved as char array
 
 
 %==========================================================================
 % Cell arrays
 
-var5 = {'some text', 4321, [24 13; 85 63]}         % 
-var5(2, :) = {'more text', 4324, [43 78; 92 34]}   % 
-var5(1, 2)        % type of content in the passed cell location
-var5{1, 2}        % data at the passed cell location
-var5{1, 3}(1, 2)  % data at the given index for the array at the passed cell location
+var5 = {'some text', 4321, [24 13; 85 63]};          % creating a cell array
+var5(2, :) = {'more text', 4324, [43 78; 92 34]};    % apending another row to the array
+var5(1, 2);        % type of content in the passed cell location
+var5{1, 2};        % data at the passed cell location
+var5{1, 3}(1, 2)   % data at the given index for the array at the passed cell location
 
 
 %==========================================================================
@@ -172,3 +172,6 @@ axis([0 10 -5 10]);   % specifies custom axis interval for the graph- min_x, max
 %>  |     element-wise or
 %>  &&    short-circuit and; only with scalar logocal condition
 %>  ||    short-circuit or; only with scalar logocal condition
+
+
+%==========================================================================
