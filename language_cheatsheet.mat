@@ -11,3 +11,8 @@ zeros(x, y);     % optional parameters; geneeates x,y array of all 0s
 ones(x, y);      % optional parameters; geneeates x,y array of all 1s
 eye(x, y);       % optional parameters; generates x,y array with \ diagonal values of 1 and rest as 0
 
+% random generators
+rand(x, y);      % optional parameters; generates x,y array with random numbers between 0 and 1
+randn(x, y);     % optional parameters; generates x,y array with normally distributed random numbers
+randi(x, y)      % optional parameters; generates x,y array with pseudorandom integers of uniform discrete distribution
+
