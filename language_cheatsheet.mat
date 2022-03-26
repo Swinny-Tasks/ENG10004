@@ -15,8 +15,9 @@ x = 3;
 y = 5;
 zeros(x, y);     % optional parameters; geneeates x,y array of all 0s
 ones(x, y);      % optional parameters; geneeates x,y array of all 1s
-eye(x, y);       % optional parameters; generates x,y array with \ diagonal values of 1 and rest as 0
 
+eye(x, y)+n      % optional parameters; generates x,y array with \ diagonal values of 1 and rest as 0
+                 % +n is again optional here; value at n would replace the default 0
 
 % random generators
 rand(x, y);      % optional parameters; generates x,y array with random numbers between 0 and 1
