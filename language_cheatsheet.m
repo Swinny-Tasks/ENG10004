@@ -100,3 +100,36 @@ fprintf('the value of pi = %f', pi)        % method 2
 
 % Float point config
 %> %.2f  would make the dcimal point round off to 2 digits
+
+
+% 2D Plot
+% General Syntax: plot(X1, Y1, line_type.............. Xn, Yn, line_type)
+% General Rules:
+%> if X and Y are vectors, then they must have equal length
+%> if X and Y are matrices, then they must have equal size
+%> if either one of them is scalar then plot function plots discrete points
+% Example:
+figure(1) % Figure 2
+x = 0:pi/100:pi*2;     % array of values from 0 to 2pi with interval of pi/100
+y1 = cos(x);
+y2 = sin(x);
+
+plot(x, y1, 'r');
+hold on;               % is there by default, however is good practice to write it
+plot(x, y2, 'g');      % if hold on wasn't there, then this graph would have replaced old one (instead of overlap)
+hold off;              % good practice to hold off after all required graphs are plotted on one figure.
+legend('Graph 1 legend', 'Graph 2 legend');
+xlabel('text');
+ylable('text');
+
+grid off;             % grid lines can be toggeled on/off
+
+% mini-graphs
+% more than one graph in a figure but without them overlapping on one other
+figure(2)
+subplot(2, 2, 1)      % specifies there would be a 2x2 grid, and we're working on 1st one
+plot(x, y1, 'r-');
+title('Sine Graph');
+axis([0 10 -5 10]);   % specifies custom axis interval for the graph- min_x, max_x, min_y, max_y
+
+
