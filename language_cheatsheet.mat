@@ -1,0 +1,13 @@
+% Built in Functions
+var1 = 100;
+sin(var1);
+cos(var1);
+tan(var1);
+cot(var1);
+
+x = 3;
+y = 5;
+zeros(x, y);     % optional parameters; geneeates x,y array of all 0s
+ones(x, y);      % optional parameters; geneeates x,y array of all 1s
+eye(x, y);       % optional parameters; generates x,y array with \ diagonal values of 1 and rest as 0
+
