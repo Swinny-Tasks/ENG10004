@@ -4,6 +4,10 @@ sin(var1);
 cos(var1);
 tan(var1);
 cot(var1);
+log(var1);       % natural log
+log10(var1);     % log to the base 10
+exp(var1);       % euler's number to the power var1
+abs(var1);       % absolute value
 
 x = 3;
 y = 5;
