@@ -53,3 +53,9 @@ loat file1.mat var1;       % load only var1 from file1
 whos                       % display info about all variables in the current workspace
 whos(var1)                 % display info about var1 (only)
 whos('-file', 'file1.mat') % display info about variables in file1
+
+
+% user input
+var3 = input('Enter data: ')       % can input both numbers and arrays to this; empty and char input = empty array
+var4 = input('Enter text: ', 's')  % stored data would be saved as char array
+
