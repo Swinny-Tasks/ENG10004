@@ -82,3 +82,21 @@ var6(2).name = 'someone else';
 var6(3)= struct('name','random text', 'num', 7430,'resuly', [58, 40, 88, 10]);
 
 
+% Display data on console
+disp(['the value of pi = ' num2str(pi)]    % method 1
+fprintf('the value of pi = %f', pi)        % method 2
+
+% Conversion characters
+%> %d   display value as integer
+%> %e   display value in exponential form
+%> %f   display value in float format
+%> %s   display value in string/char format
+
+% Escape characters
+%> \n   new line
+%> \b   backspace
+%> \\   ordinary \
+%> %%   ordinary %
+
+% Float point config
+%> %.2f  would make the dcimal point round off to 2 digits
