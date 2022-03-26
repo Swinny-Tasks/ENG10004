@@ -16,3 +16,9 @@ rand(x, y);      % optional parameters; generates x,y array with random numbers 
 randn(x, y);     % optional parameters; generates x,y array with normally distributed random numbers
 randi(x, y)      % optional parameters; generates x,y array with pseudorandom integers of uniform discrete distribution
 
+% predefined values
+pi      % value of pi to 15 significant digit
+i, j    % imaginary numbers
+Inf     % infinity
+NaN     % Not a number, such as 0/0
+ans     % stores result of last expresion that wasn't stored in a var
