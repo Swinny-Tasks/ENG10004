@@ -23,7 +23,9 @@ eye(x, y)+n      % optional parameters; generates x,y array with \ diagonal valu
 % random generators
 rand(x, y);      % optional parameters; generates x,y array with random numbers between 0 and 1
 randn(x, y);     % optional parameters; generates x,y array with normally distributed random numbers
-randi(x, y)      % optional parameters; generates x,y array with pseudorandom integers of uniform discrete distribution
+randi(x, y)      % y is optional parameters; 
+                 % generates square array with rows and columns = y
+                 % random numer ranges from 0 to x
 
 %==========================================================================
 % predefined values
@@ -99,7 +101,7 @@ var6(3)= struct('name','random text', 'num', 7430,'resuly', [58, 40, 88, 10]);
 %==========================================================================
 % Display data on console
 
-disp(['the value of pi = ' num2str(pi)]    % method 1
+disp(['the value of pi = ' num2str(pi)])   % method 1
 fprintf('the value of pi = %f', pi)        % method 2
 
 % Conversion characters
