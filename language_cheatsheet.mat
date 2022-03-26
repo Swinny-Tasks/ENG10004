@@ -11,17 +11,18 @@ abs(var1);       % absolute value
 int2str(var1);   % convert integer value to string(/char array); will ignore decimal values
 num2str(var1)    % convert numerical value to string(/char array); will include decimal values
 
-
 x = 3;
 y = 5;
 zeros(x, y);     % optional parameters; geneeates x,y array of all 0s
 ones(x, y);      % optional parameters; geneeates x,y array of all 1s
 eye(x, y);       % optional parameters; generates x,y array with \ diagonal values of 1 and rest as 0
 
+
 % random generators
 rand(x, y);      % optional parameters; generates x,y array with random numbers between 0 and 1
 randn(x, y);     % optional parameters; generates x,y array with normally distributed random numbers
 randi(x, y)      % optional parameters; generates x,y array with pseudorandom integers of uniform discrete distribution
+
 
 % predefined values
 pi      % value of pi to 15 significant digit
@@ -35,3 +36,10 @@ ans     % stores result of last expresion that wasn't stored in a var
 clc    % clears user terminal
 clear  % removes all variables stored int the workspace
 
+
+% 2D MATRICES
+var2 =  [12 34 2 23; 43 12 7 58; 61 94 3 75];
+sum_row = sum(var2);        % would store sum of all rows (individually) and return as 1D matrix
+sum_col = sum(var2')';      % ' inverts rows with columns; operation used to perform column addition with row add method
+sum_dia = sum(diag(var2));  % adds all diagonal terms from 0,0
+flip_rows = fliplr(var2);   % flips content of the rows, so value in first cell (in a row) becomes value of last cell (of that row)
