@@ -8,6 +8,9 @@ log(var1);       % natural log
 log10(var1);     % log to the base 10
 exp(var1);       % euler's number to the power var1
 abs(var1);       % absolute value
+int2str(var1);   % convert integer value to string(/char array); will ignore decimal values
+num2str(var1)    % convert numerical value to string(/char array); will include decimal values
+
 
 x = 3;
 y = 5;
@@ -26,3 +29,9 @@ i, j    % imaginary numbers
 Inf     % infinity
 NaN     % Not a number, such as 0/0
 ans     % stores result of last expresion that wasn't stored in a var
+
+
+% Console Commands
+clc    % clears user terminal
+clear  % removes all variables stored int the workspace
+
