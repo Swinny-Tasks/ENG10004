@@ -43,3 +43,13 @@ sum_row = sum(var2);        % would store sum of all rows (individually) and ret
 sum_col = sum(var2')';      % ' inverts rows with columns; operation used to perform column addition with row add method
 sum_dia = sum(diag(var2));  % adds all diagonal terms from 0,0
 flip_rows = fliplr(var2);   % flips content of the rows, so value in first cell (in a row) becomes value of last cell (of that row)
+
+
+% Data Managment 
+save file1.mat;            % save all declared variables in file1.mat
+save('file2.mat', 'var1')  % save only selected variables 
+load file1.mat;            % load data from file1.mat
+loat file1.mat var1;       % load only var1 from file1
+whos                       % display info about all variables in the current workspace
+whos(var1)                 % display info about var1 (only)
+whos('-file', 'file1.mat') % display info about variables in file1
