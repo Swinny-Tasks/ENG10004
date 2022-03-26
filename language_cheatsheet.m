@@ -151,3 +151,24 @@ title('Sine Graph');
 axis([0 10 -5 10]);   % specifies custom axis interval for the graph- min_x, max_x, min_y, max_y
 
 
+%==========================================================================
+% Relational Operators
+%  compares two operands by determining whether a comparison statement is true or false.
+
+%>  ==    are ___ and ___ equal?
+%>  ~=    are ___ and ___ not equal?
+%>  >     is ___ bigger than ___ ?
+%>  >=    is ___ bigger than or equal to ___?
+%>  <     is ___ smaller than ___?
+%>  <=    is ___ smaller than or equal to ___?
+
+
+%==========================================================================
+% A logical operator 
+% examines true/false statements and produces a result that is true (1) or false (0)
+
+%>  ~     NOT
+%>  &     element-wise and
+%>  |     element-wise or
+%>  &&    short-circuit and; only with scalar logocal condition
+%>  ||    short-circuit or; only with scalar logocal condition
