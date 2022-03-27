@@ -193,7 +193,7 @@ end
 %==========================================================================
 % Switch statements
 
-dayString = input('Enter day of week: ', 's')
+dayString = input('Enter day of week: ', 's');
 switch dayString
     case {'monday','Monday','MONDAY'}
         disp('Start of workweek!')
@@ -212,3 +212,33 @@ switch dayString
     otherwise
         disp('Invalid day of week!')
 end
+
+
+%==========================================================================
+% Loops
+
+% For loop
+for k = 10:-1:1
+  disp(1:k)
+end
+
+% White loop
+x = 1;
+while x < 15
+    x=2*x
+end
+
+% break command
+% example code- biggest 3 digit number thats divisible by 7
+for k = 1000:-1:1
+    if mod(k, 7) == 0
+        disp(k);
+        break;
+    end
+end
+
+% contiue command
+% instead of completely stopping the loop, if said condition is matched, 
+% continue statement skips all the remaining code and continues with the
+% code.
+
