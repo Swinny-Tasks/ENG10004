@@ -23,9 +23,9 @@ eye(x, y)+n      % optional parameters; generates x,y array with \ diagonal valu
 % random generators
 rand(x, y);      % optional parameters; generates x,y array with random numbers between 0 and 1
 randn(x, y);     % optional parameters; generates x,y array with normally distributed random numbers
-randi(x, y)      % y is optional parameters; 
-                 % generates square array with rows and columns = y
-                 % random numer ranges from 0 to x
+randi(100, x, y) % x, y are optional parameters; 
+                 % generates x by y matrix with elements with random value
+                 % from 0 to 100
 
 %==========================================================================
 % predefined values
