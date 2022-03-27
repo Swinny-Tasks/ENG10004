@@ -1,0 +1,1 @@
+% week 3 lecture notes example programming challenge
