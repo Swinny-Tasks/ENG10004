@@ -191,3 +191,24 @@ end
 
 
 %==========================================================================
+% Switch statements
+
+dayString = input('Enter day of week: ', 's')
+switch dayString
+    case {'monday','Monday','MONDAY'}
+        disp('Start of workweek!')
+    case {'tuesday','Tuesday','TUESDAY'}
+        disp('Day 2 of workweek!')
+    case {'wednesday','Wednesday','WEDNESDAY'}
+        disp('Day 3 of workweek!')
+    case {'thursday','Thursday','THURSDAY'}
+        disp('Day 4 of workweek!')
+    case {'friday','Friday','FRIDAY'}
+        disp('Last day of workweek!')
+    case {'saturday','Saturday','SATURDAY'}
+        disp('Start of Weekend!')
+    case {'sunday','Sunday','SUNDAY'}
+        disp('End of Weekend!')
+    otherwise
+        disp('Invalid day of week!')
+end
