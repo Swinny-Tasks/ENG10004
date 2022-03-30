@@ -1,5 +1,6 @@
 angle = linspace(0, 2*pi);
 lc = {2:4 2:4 2 4}; % line cords
+cir_color = ['y' 'r'; 'c', 'b'];
 counter = 0;
 
 for i = 2:2:4
