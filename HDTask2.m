@@ -3,40 +3,28 @@ figure(1) % drawing figure once; changing its content in every loop
 
 while true
   fprintf(2, '\nTo exit the program, enter x\n');
+  
   user_input = input('Or enter an integer (0-9): ', 's');
-
-  if length(user_input) > 1
-    % comparing ascii to see if first digit is a num
-    if double(user_input(1)) > 47 && double(user_input(1)) < 58
-        % checking if the number contains decimal points
-        if rem(str2double(user_input), 1) ~= 0
-            disp("Enter an integer (0-9) rather than any decimal number!")
-        
-        % when number is out of expected range
-        else
-            disp("Enter an integer between 0 and 9")
+  input_int = str2double(user_input);
+      if isnan(input_int)  % user entered text input
+        if (isequal(user_input, 'x') || isequal(user_input, 'X'))
+          clc; clear; close all;
+          break;
+        else  % user entered random text letters
+          fprintf(2, "INVALID INPUT!\n\n");
+          continue;
         end
-    else
-      % all other errors for big input
-      fprintf(2, 'INVALID INPUT\n');
-    end
-    continue; % skip the remaining code when input is not right
-
-  % checking if user wants to quit; comparing input ascii with x and X
-  elseif double(user_input) == 88 || double(user_input) == 120
-    clc; clear; close all;
-    break;
-  
-  % checking if input is in range
-  elseif double(user_input) > 47 && double(user_input) < 58
-    num_bin = dec2bin(str2double(user_input));
-  
-  % all other errors
-  else
-    fprintf(2, 'INVALID INPUT\n');
-    continue;
-
-  end
+      else % user entered numbers
+        if ~(input_int >= 0 && input_int <= 9) % entered num is not in the allowed range
+          fprintf(2, "Enter integer between 0 and 9!\n\n");
+          continue;
+        elseif (rem(input_int, 1) ~= 0)
+          disp("Enter an integer (0-9) rather than any decimal number!")
+          continue;
+        else
+          num_bin = dec2bin(input_int);
+        end
+      end
 
   % making all chars use 4bits- BCD convention
   while length(num_bin) ~= 4
@@ -70,7 +58,7 @@ while true
   plot(6:10, 16.*ones(1, 5), LED_color(g.Data + 1), 'LineWidth', 3);
   hold off;
   axis([0 30 0 30]);
-  set(gca,'xtick',[],'ytick',[])
+  set(gca,'xtick',[],'ytick',[])  % hide axis numbers 
 
   % Display binary details (part 4.2)
   text(15, 19, 'W = '); text(17, 19, num_bin(1)); 
