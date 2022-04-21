@@ -1,10 +1,6 @@
 % motion constants
 v = 4; g = 9.81; h = 1.8;
 
-% circle constants
-rad = 0.1667; cir_ang=0:0.01:360; 
-xp=rad*cosd(cir_ang); yp=rad*sind(cir_ang);
-
 % game activer, scoreboard and streak record
 in_game = true; score = 0; streak = 0;
 
@@ -13,6 +9,11 @@ while in_game
   f = figure(1);
   f.Position = [10, 50, 600 650];
   x_cord = randi(250, 1) / 100; % random location for board
+
+
+ % draw ball
+  ball = plot(0, h, '.', 'MarkerSize', 55);
+  hold on;
 
   % plotting board
   plot(x_cord:0.1:(x_cord+0.5), zeros(1, 6), 'LineWidth', 5);
@@ -28,10 +29,6 @@ while in_game
 
   % unlimited chances for a single board placement
   while is_playing
-    % draw ball
-    chart = plot(xp,h+yp, 'color', 'red');
-    hold on;
-
     % get user action input
     fprintf('\nTo exit the game, enter '); fprintf(2, 'exit\n');
     user_input = input("To play the game, enter a shooting angle between -90 and 90 deg: ", 's');
@@ -58,7 +55,7 @@ while in_game
       y = h + (v*sind(drop_ang)*t) - (0.5*g*(t^2));
 
       % checking if the ball is over the board
-      if x >= x_cord && x <= (x_cord+0.5) && round(y, 2) > 0.1 && round(y, 2) < 0.24
+      if x >= x_cord && x <= (x_cord+0.5) && round(y, 2) > 0 && round(y, 2) < 0.14
         is_playing = false;
         streak = streak + 1;
         score = score + 1;
@@ -68,11 +65,12 @@ while in_game
         % streak is reset on evrey wrong attempt
         text(3, 3, "---------------------"); 
         streak = 0;
-        continue;
+        set(ball, 'XData', 0, 'YData', h);
+        break;
       end
   
       % updating ball's x and y value; animation
-      set(chart, 'XData', x+xp, 'YData', y+yp);
+      set(ball, 'XData', x, 'YData', y);
       
       pause(0.01); % display frame rate
     end
