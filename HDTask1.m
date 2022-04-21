@@ -10,6 +10,8 @@ in_game = true; score = 0; streak = 0;
 
 % game will loop as long as in_game is true;
 while in_game
+  f = figure(1);
+  f.Position = [10, 50, 600 650];
   x_cord = randi(250, 1) / 100; % random location for board
 
   % plotting board
